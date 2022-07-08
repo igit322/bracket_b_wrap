@@ -224,6 +224,7 @@ a:active {
   }
 
   .flip {
+    display: none;
     width: 43.33333333%;
   }
 }
@@ -235,6 +236,7 @@ a:active {
   }
 
   .flip {
+    display: none;
     width: auto;
   }
 }
