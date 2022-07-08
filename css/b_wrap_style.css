@@ -8,11 +8,12 @@
   border: 0;
   box-sizing: border-box;
 }
-/* css */
+
 body {
   font-family: "Noto Sans KR", sans-serif;
   max-width: 1400px;
   margin: 0px auto;
+  text-align: center;
 }
 
 ol,
@@ -28,10 +29,6 @@ div {
 a {
   display: inline-block;
   text-decoration: none;
-
-  /* width: 100%;
-    height: 100%; */
-  /* background-color: #ffc6f5; */
 }
 
 a:link {
@@ -42,14 +39,6 @@ a:visited {
 }
 a:active {
   color: #2e2e2e;
-}
-
-/* ----- 카드 섹션 전체 ----- */
-
-.b_wrap {
-  display: block;
-  height: 750px;
-  padding-top: 200px;
 }
 
 /* ----- 글씨 ----- */
@@ -101,38 +90,55 @@ a:active {
 }
 
 #metaverse {
-  margin-top: 60px; /* 아이콘 이미지 위친조정*/
+  margin-top: 60px; /* 아이콘 이미지 위치조정*/
 }
 
-/* ----- 카드 4등분 ----- */
-.b_wrap .con {
-  max-width: 1400px;
-  margin: 0 auto;
+/* front */
+/* ----- 영역 ----- */
+
+.b_wrap {
+  display: block;
+  height: 750px;
+  padding-top: 200px;
 }
+
+.b_wrap .container {
+  max-width: 1400px;
+}
+
+.b_wrap .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ----- 카드 배치 ----- */
 
 .b_wrap .flip {
+  min-width: 22%;
   display: inline-block;
   position: relative;
   /* width: calc(100% / 4 - 3%); */
   height: 350px;
   text-align: center;
   margin: 0 auto;
+  margin: 20px;
+  padding: 0;
   transition: 1s;
   /* perspective: 1000px; */ /* 원근감 */
   /* perspective-origin: 50% 50%; */
-  margin: 20px;
 }
 
 .b_wrap .flip-item {
+  width: 100%;
   display: inline-block;
   padding-top: 50px;
   padding-bottom: 50px;
-
   transform-style: preserve-3d;
   backface-visibility: hidden;
 }
 
-/* ----- 애니메이션 ----- */
+/* 애니메이션 */
 /* ----- back 이미지 ----- */
 
 #back1 {
@@ -182,10 +188,12 @@ a:active {
 /* ----- 마우스오버 ----- */
 
 .front {
+  min-width: 230px;
   width: 100%;
   height: 100%;
+  padding: 20px;
   background-color: #f6f6f6;
-  position: absolute; /* 이미지 합쳐야하는데 이걸 쓰면 크기가 바뀌어서 일단 빼놓음.. */
+  position: absolute;
   backface-visibility: hidden;
   transition: 1s;
   transform: rotateY(0deg);
@@ -193,8 +201,10 @@ a:active {
 }
 
 .back {
+  min-width: 230px;
   width: 100%;
   height: 100%;
+  padding: 20px;
   transform: rotateY(180deg);
   transition: 1s;
 }
@@ -206,32 +216,25 @@ a:active {
   transform: rotateY(0deg);
 }
 
-/* 여백수정 */
+/* ----- 반응형웹 ----- */
 
-.b_wrap .flip {
-  margin: 20px;
+@media screen and (max-width: 1330px) {
+  .row {
+    width: auto;
+  }
+
+  .flip {
+    width: 43.33333333%;
+  }
 }
 
-ul {
-  margin: 0 auto;
-  text-align: center;
-}
+@media screen and (max-width: 600px) {
+  .row {
+    width: auto;
+    /* flex-wrap: wrap; */
+  }
 
-.back {
-  min-width: 225px;
-  padding: 20px;
-  margin: 20px;
-}
-
-.front {
-  min-width: 225px;
-  padding: 20px;
-  margin: 20px;
-}
-
-
-@media screen and (max-width: 768px) {
-  .container{
-    width: 70%;
+  .flip {
+    width: auto;
   }
 }
