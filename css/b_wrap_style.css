@@ -224,7 +224,7 @@ a:active {
   }
 
   .flip {
-    display: none;
+    display: none; /*크롬 미디어쿼리 적용*/
     width: 43.33333333%;
   }
 }
@@ -236,7 +236,7 @@ a:active {
   }
 
   .flip {
-    display: none;
+    display: none; /*크롬 미디어쿼리 적용*/
     width: auto;
   }
 }
