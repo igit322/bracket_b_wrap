@@ -22,7 +22,7 @@ bracket팀의 클론코딩 프로젝트 개인 파트 저장소
 ### <파트 주문사항>   
 마우스를 올렸을 때 카드가 뒤집히며 이미지와 글이 나타납니다.  
 
-![이미지](https://velog.velcdn.com/images/igit322/post/6a13e974-2c5c-43b5-b8ff-fcc30a7cb665/image.gif)
+![이미지](https://velog.velcdn.com/images/igit322/post/7e23a64a-bc9a-4713-8d24-7a0310583c65/image.png)
 
 ### <기능>
 #### 1. 마우스를 올렸을 때 : 카드가 뒤집히며 이미지와 글이 나타납니다.
